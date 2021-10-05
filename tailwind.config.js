@@ -1,35 +1,27 @@
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  darkMode: "media", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      gilroy: ["Gilroy"],
+    },
     boxShadow: {
-      DEFAULT: "0 8px 48px rgba(0, 0, 0, 0.04)",
-      sm: " 0px 4px 44px -5px rgba(39, 48, 62, 0.1)",
+      DEFAULT: " 0px 0px 20px 3px #F2EFF1",
+    },
+    transitionTimingFunction: {
+      "out-quad": "cubic-bezier(0.5, 1, 0.89, 1)",
     },
     colors: {
-      blue: {
-        DEFAULT: "#518DDF",
-        light: "#70A4EC",
-      },
-      gray: {
-        DEFAULT: "#F2F2F2",
-      },
-      gray_blue: {
-        DEFAULT: "#EAECEF",
-      },
-      gray_dark: {
-        DEFAULT: "#40434A",
-      },
-      gray_light: {
-        DEFAULT: "#84878D",
-      },
-      white: {
-        DEFAULT: "#FFFFFF",
-      },
+      black_coffee: "#382E35",
+      black_coffee_light: "#43373F",
+      black_coffee_dark: "#32292F",
+      gray: "#F2EFF1",
+      main: "#FE5F55",
+      white: "#FFFFFF",
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
 }
