@@ -1,21 +1,17 @@
 import React from "react"
-import { motion } from "framer-motion"
 
-interface heading_props {
-  children: React.ReactNode
-  additional_class?: string
-}
+import { heading_props } from "../interfaces"
 
 const Heading = ({ children, additional_class }: heading_props) => {
   return (
-    <motion.h1
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className={"font-bold text-5xl text-black_coffee_light my-8 " + (additional_class || "")}
+    <h1
+      className={
+        "text-3xl lg:text-4xl font-bold text-black_light ease-out-quad duration-200 dark:text-white " +
+        (additional_class || "")
+      }
     >
       {children}
-    </motion.h1>
+    </h1>
   )
 }
 

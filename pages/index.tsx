@@ -1,13 +1,11 @@
 import type { NextPage } from "next"
 import Head from "next/head"
-
 import Page_Wrapper from "../src/components/atoms/page_wrapper"
-import Background from "../src/components/organisms/background"
 import Hello from "../src/components/organisms/hello"
-import Skills from "../src/components/organisms/skills"
-import Contact from "../src/components/organisms/contact"
-
-import Parallax_Wrapper from "../src/components/atoms/parallax_wrapper"
+import Setting from "../src/components/molecules/settings/settings"
+import Benefits from "../src/components/organisms/benefits"
+import Contact from "../src/components/molecules/contact/contact"
+import Projects from "../src/components/organisms/projects"
 
 const Home: NextPage = () => {
   return (
@@ -19,17 +17,13 @@ const Home: NextPage = () => {
       </Head>
 
       <Page_Wrapper>
-        <Background />
-        <Parallax_Wrapper>
+        <div className="flex flex-col z-10 w-full items-center">
           <Hello />
-        </Parallax_Wrapper>
-        <Parallax_Wrapper>
-          <Skills />
-        </Parallax_Wrapper>
-
-        <Parallax_Wrapper>
-          <Contact />
-        </Parallax_Wrapper>
+        </div>
+        <Setting />
+        <Benefits />
+        <Contact />
+        <Projects />
       </Page_Wrapper>
     </>
   )

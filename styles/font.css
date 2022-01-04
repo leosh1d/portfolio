@@ -11,11 +11,14 @@
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-weight: 600;
-  src: url("../src/fonts/gilroy-semibold.woff2") format("woff2");
+  font-family: "Cascadia";
+  src: url("../src/fonts/CascadiaMono.woff2") format("woff2");
 }
 
 * {
   font-family: "Gilroy";
+}
+
+.cascadia {
+  font-family: "Cascadia";
 }

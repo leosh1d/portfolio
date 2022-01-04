@@ -1,34 +1,33 @@
 #nprogress .bar {
-  background-color: #fe5f55 !important;
+  background-color: #ed2939 !important;
 }
 
 *:focus {
   outline: none;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 ::selection {
-  background-color: #fe5f55;
-  color: #fff;
+  background-color: hsla(355, 84%, 55%, 0.1);
+  color: #ed2939;
 }
 
 *::-webkit-scrollbar {
-  width: 1em;
+  width: 0.5em;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #fe5f55;
-  border-radius: 3px;
+  border-top: 2em transparent solid;
+  border-bottom: 2em transparent solid;
+  @apply bg-main bg-clip-padding;
 }
 
 .z--1 {
   z-index: -1;
 }
-
-.svg-box svg,
-.svg-box svg path {
-  height: 100%;
-}
-
 @keyframes cursor {
   0% {
     opacity: 1;
@@ -55,24 +54,85 @@
   width: 3px;
   border-radius: 2px;
   right: 0;
-  @apply bg-black_coffee_light;
+  @apply bg-black_light dark:bg-white;
   position: absolute;
   top: 0;
 }
 
-input[type="text"] {
+input[type="text"],
+textarea {
   background: rgba(0, 0, 0, 0);
 }
 
-input[type="text"] + span {
+textarea {
+  min-height: 8rem;
+}
+
+input[type="text"] + span,
+textarea + span {
   top: 50%;
   font-size: 1.125rem;
   transform: translateY(-50%);
 }
 
 input[type="text"]:focus + span,
-input[type="text"]:not(:placeholder-shown) + span {
+input[type="text"]:not(:placeholder-shown) + span,
+textarea:focus + span,
+textarea:not(:placeholder-shown) + span {
   top: 0.5rem;
   transform: none;
   font-size: 1rem;
+}
+
+.switch[data-value="1"] {
+  justify-content: flex-end;
+}
+
+.switch-theme[data-value="system"] {
+  justify-content: center;
+}
+
+.switch-theme[data-value="light"] {
+  justify-content: flex-end;
+}
+
+.pixel-bg {
+  background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent calc(100% - 1px),
+      black calc(100% - 1px),
+      black 100%
+    ),
+    linear-gradient(90deg, black 1px, transparent 1.5px, transparent 100%),
+    linear-gradient(0deg, transparent 0%, transparent calc(100% - 1px), black calc(100% - 1px), black 100%),
+    linear-gradient(0deg, black 1px, transparent 1px, transparent 100%);
+
+  background-size: 0.75rem 0.75rem;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 1) inset;
+}
+
+.message-box[data-isuser="false"] {
+  @apply mr-24 ml-0 lg:mr-12;
+}
+
+.message-box[data-isuser="false"] span {
+  @apply mr-auto;
+}
+
+.message-box[data-isuser="true"] {
+  @apply ml-24 mr-0 flex-row-reverse lg:ml-12;
+}
+
+.message-box[data-isser="true"] span {
+  @apply ml-auto;
+}
+
+.text-decoration-custom {
+  text-decoration-color: rgba(0, 0, 0, 0) !important;
+}
+
+.text-decoration-custom:hover,
+.text-decoration-custom:focus {
+  text-decoration-color: currentColor !important;
 }
