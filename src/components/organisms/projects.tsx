@@ -55,7 +55,7 @@ const Projects = () => {
           <Link_img href="/works/premium73" img={braces} />
           <Link_img href="/works/delivery" img={delivery} />
           <Link_img href="/works/grebeni" img={grebeni} />
-          <Link_img href="/works/mak" img={mak} />
+          <Link_img href="/works/mac" img={mak} />
         </div>
       </div>
     </div>
