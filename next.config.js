@@ -1,5 +1,4 @@
 module.exports = {
-  presets: ["next/babel"],
   i18n: {
     locales: ["en", "ru"],
     defaultLocale: "ru",
