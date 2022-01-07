@@ -5,7 +5,6 @@ import "nprogress/nprogress.css"
 
 import { useRouter } from "next/router"
 import { ThemeProvider } from "next-themes"
-import { AnimatePresence } from "framer-motion"
 import Router from "next/router"
 import nProgress from "nprogress"
 import type { AppProps } from "next/app"
@@ -21,9 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <main className="flex flex-col bg-white dark:bg-black_dark ease-out-quad duration-200">
-        <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
+        <Component {...pageProps} key={router.route} />
       </main>
     </ThemeProvider>
   )

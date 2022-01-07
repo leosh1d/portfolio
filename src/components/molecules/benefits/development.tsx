@@ -68,7 +68,6 @@ const Development = () => {
             variants={line_variants}
             animate={animation}
             transition={{ duration: 0.4, delay: 0.5 }}
-            initial="hidden"
             className="origin-left absolute bg-black_light dark:bg-white h-2 w-full rounded-full"
           />
         </motion.div>

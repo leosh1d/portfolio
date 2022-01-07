@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
@@ -8,7 +8,7 @@ interface scroll_wrapper_props {
 }
 
 const Scroll_Wrapper = ({ children, delay }: scroll_wrapper_props) => {
-  const [ref, inView] = useInView({ threshold: 0.8, triggerOnce: true })
+  const [ref, inView] = useInView({ threshold: 0.85, triggerOnce: true })
   const variants = {
     hidden: {
       y: 50,
@@ -33,7 +33,6 @@ const Scroll_Wrapper = ({ children, delay }: scroll_wrapper_props) => {
     <motion.div
       ref={ref}
       variants={variants}
-      initial="hidden"
       exit="hidden"
       animate={animation}
       className="h-full w-full"
