@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { d_benefits } from "../../dictionary"
 
 import Img from "../../atoms/img"
-import img_load from "../../../img/fast-load.png"
+import img_load from "../../../img/fast-load.webp"
 
 const Fast_load = () => {
   const lang = useRouter().locale || "en"

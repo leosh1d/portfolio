@@ -3,8 +3,8 @@ import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
 import Img from "../atoms/img"
-import Premium_m from "../../img/premium_m.png"
-import Premium_pc from "../../img/premium_pc.png"
+import Premium_m from "../../img/premium_m.webp"
+import Premium_pc from "../../img/premium_pc.webp"
 
 const D_premium73 = (props: { lang: string }) => {
   return (

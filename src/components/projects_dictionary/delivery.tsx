@@ -3,9 +3,9 @@ import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
 import Img from "../atoms/img"
-import Delivery1 from "../../img/delivery1.png"
-import Delivery2 from "../../img/delivery2.png"
-import Delivery3 from "../../img/delivery3.png"
+import Delivery1 from "../../img/delivery1.webp"
+import Delivery2 from "../../img/delivery2.webp"
+import Delivery3 from "../../img/delivery3.webp"
 
 const D_devilvery = (props: { lang: string }) => {
   return (

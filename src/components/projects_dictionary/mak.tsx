@@ -3,7 +3,7 @@ import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
 import Img from "../atoms/img"
-import mak1 from "../../img/mak1.png"
+import mak1 from "../../img/mak1.webp"
 
 const D_mak = (props: { lang: string }) => {
   return (

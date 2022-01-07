@@ -1,8 +1,8 @@
 import React from "react"
 import Heading from "../../atoms/heading"
 import Img from "../../atoms/img"
-import img_mac from "../../../img/mb-mac.png"
-import img_i from "../../../img/mb-i.png"
+import img_mac from "../../../img/mb-mac.webp"
+import img_i from "../../../img/mb-i.webp"
 
 const Mobile_First = () => {
   return (

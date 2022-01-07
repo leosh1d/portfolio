@@ -3,8 +3,8 @@ import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
 import Img from "../atoms/img"
-import Grebeni_m from "../../img/grebeni_m.png"
-import Grebeni_pc from "../../img/grebeni_pc.png"
+import Grebeni_m from "../../img/grebeni_m.webp"
+import Grebeni_pc from "../../img/grebeni_pc.webp"
 
 const D_grebeni = (props: { lang: string }) => {
   return (
