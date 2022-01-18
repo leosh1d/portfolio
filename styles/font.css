@@ -1,24 +1,7 @@
-@font-face {
-  font-family: "Gilroy";
-  font-weight: 400;
-  src: url("../src/fonts/gilroy-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-weight: 700;
-  src: url("../src/fonts/gilroy-bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Cascadia";
-  src: url("../src/fonts/CascadiaMono.woff2") format("woff2");
-}
-
 * {
-  font-family: "Gilroy";
+  font-family: "Montserrat";
 }
 
 .cascadia {
-  font-family: "Cascadia";
+  font-family: "Source Code Pro";
 }

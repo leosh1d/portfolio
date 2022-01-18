@@ -141,7 +141,7 @@ export const d_bot: dictionary_options = {
   },
   btn_stack: {
     en: "👨‍💻 What stack do you program on?",
-    ru: "👨‍💻 На каком стеке ты программируешь?"
+    ru: "👨‍💻 На каком стеке ты работаешь?"
   },
   stack_response: {
     en: "Typecript, React и Next.js/Gatsby ",
