@@ -2,7 +2,7 @@ import "../styles/font.css"
 import "../styles/globals.css"
 import "tailwindcss/tailwind.css"
 import "nprogress/nprogress.css"
-
+import { useEffect } from "react"
 import { useRouter } from "next/router"
 import { ThemeProvider } from "next-themes"
 import Router from "next/router"
@@ -16,18 +16,31 @@ Router.events.on("routeChangeStart", nProgress.start)
 Router.events.on("routeChangeError", nProgress.done)
 Router.events.on("routeChangeComplete", nProgress.done)
 
+interface IRouteChainge {
+  url: string
+}
+
+declare const window: any
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
+  const handleRouteChange = ({ url }: IRouteChainge) => {
+    window.gtag("config", "[Tracking ID]", {
+      page_path: url,
+    })
+  }
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", handleRouteChange)
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <ThemeProvider attribute="class">
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <Head></Head>
       <main className="flex flex-col bg-white dark:bg-black_dark ease-out-quad duration-200">
         <Component {...pageProps} key={router.route} />
       </main>

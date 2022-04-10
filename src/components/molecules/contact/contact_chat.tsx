@@ -121,14 +121,14 @@ const Contact_Chat = ({ lang }: { lang: string }) => {
           <div className="flex flex-col">
             <a
               href="https://t.me/leosh1d"
-              className="rounded-3xl focus:ring-4 ring-main relative my-2 flex flex-row justify-center cursor-pointer ml-auto p-4 font-bold bg-main bg-opacity-5 hover:bg-opacity-10 text-main duration-200 ease-out-quad"
+              className="rounded-3xl focus-visible:ring-4 ring-main relative my-2 flex flex-row justify-center cursor-pointer ml-auto p-4 font-bold bg-main bg-opacity-5 hover:bg-opacity-10 text-main duration-200 ease-out-quad"
             >
               {"\u00A0"}
               Telegram
             </a>
             <a
               href="mailto:leosh1dddd@gmail.com"
-              className="rounded-3xl focus:ring-4 ring-main my-2 cursor-pointer ml-auto p-4 font-bold bg-main text-main bg-opacity-5 hover:bg-opacity-10 duration-200 ease-out-quad"
+              className="rounded-3xl focus-visible:ring-4 ring-main my-2 cursor-pointer ml-auto p-4 font-bold bg-main text-main bg-opacity-5 hover:bg-opacity-10 duration-200 ease-out-quad"
             >
               ✉️ Mail
             </a>

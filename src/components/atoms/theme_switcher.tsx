@@ -17,7 +17,7 @@ const Theme_Switcher = () => {
   return (
     <div className=" rounded-full flex flex-row my-2 p-2 bg-gray_dark dark:bg-black_dark ease-out-quad duration-200 relative">
       <button
-        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
+        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus-visible:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
         onClick={() => {
           setTheme("dark")
         }}
@@ -25,7 +25,7 @@ const Theme_Switcher = () => {
         {lang === "ru" ? "темное" : "dark"}
       </button>
       <button
-        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
+        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus-visible:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
         onClick={() => {
           setTheme("system")
         }}
@@ -33,7 +33,7 @@ const Theme_Switcher = () => {
         {lang === "ru" ? "система" : "system"}
       </button>
       <button
-        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
+        className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus-visible:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
         onClick={() => {
           setTheme("light")
         }}

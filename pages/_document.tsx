@@ -11,6 +11,16 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@700&display=swap"
             rel="stylesheet"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7VME9VL8T" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-X7VME9VL8T');`,
+            }}
+          />
         </Head>
         <body>
           <Main />

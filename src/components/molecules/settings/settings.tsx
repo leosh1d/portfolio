@@ -35,7 +35,7 @@ const Settings = () => {
             whileTap={{ scale: 0.8 }}
             name="close"
             aria-label="close"
-            className="absolute z-10 left-4 top-4 bg-white p-1 rounded-xl ease-out-quad duration-200 cursor-pointer dark:bg-black_dark focus:ring-4 ring-main"
+            className="absolute z-10 left-4 top-4 bg-white p-1 rounded-xl ease-out-quad duration-200 cursor-pointer dark:bg-black_dark focus-visible:ring-4 ring-main"
             onClick={() => set_is_open(false)}
           >
             <Close />
