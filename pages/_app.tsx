@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class">
-      <Head></Head>
       <main className="flex flex-col bg-white dark:bg-black_dark ease-out-quad duration-200">
         <Component {...pageProps} key={router.route} />
       </main>
