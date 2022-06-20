@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Image from "next/image"
 
-export interface Img_props {
+interface Img_props {
   src: string
   alt: string
   layout?: "responsive" | "fixed" | "fill" | "intrinsic" | "raw"
@@ -12,7 +12,7 @@ export interface Img_props {
   width?: number
 }
 
-export const DynamicImg = ({
+export function DynamicImg({
   src,
   alt,
   objectFit,
@@ -21,7 +21,7 @@ export const DynamicImg = ({
   height,
   width,
   parentClass = "",
-}: Img_props) => {
+}: Img_props) {
   const [is_load, set_is_load] = useState(false)
 
   const getPlaceholder = (src: string) => {
