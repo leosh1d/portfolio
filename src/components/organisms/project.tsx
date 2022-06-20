@@ -5,7 +5,7 @@ import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import { useState, useRef } from "react"
 
-import Img from "../atoms/Img"
+import DynamicImg from "../atoms/Img"
 
 import { useRouter } from "next/router"
 import Markdown from "markdown-to-jsx"
@@ -34,7 +34,7 @@ export default function Project({ src, title, md = "", stack, height, width }: P
     } else {
       offScroll()
     }
-  }, [router.query, title])
+  }, [router.query, title, offScroll])
 
   const AnimationStart = () => {
     setIsAnimating(true)
@@ -122,7 +122,7 @@ export default function Project({ src, title, md = "", stack, height, width }: P
             initial={{ borderRadius: 24 }}
             animate={isOpened ? { paddingTop: "56.25%", borderRadius: 24 } : { paddingTop: "75%", borderRadius: 24 }}
           >
-            <Img src={src} layout="fill" objectFit="cover" alt="cover of project" />
+            <DynamicImg src={src} layout="fill" objectFit="cover" alt="cover of project" />
           </motion.div>
 
           <motion.div layout="position" transition={transition} className="w-screen">
@@ -132,7 +132,7 @@ export default function Project({ src, title, md = "", stack, height, width }: P
                   wrapper: React.Fragment,
                   overrides: {
                     img: {
-                      component: Img,
+                      component: DynamicImg,
                       props: {
                         className: "rounded-3xl",
                         layout: "intrinsic",
