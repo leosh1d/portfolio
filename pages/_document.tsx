@@ -14,7 +14,6 @@ class MyDocument extends Document {
           />
           <Script async src="https://www.googletagmanager.com/gtag/js?id=G-X7VME9VL8T" />
           <Script
-            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
