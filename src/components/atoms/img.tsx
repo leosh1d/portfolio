@@ -1,14 +1,6 @@
 import React, { useState } from "react"
 import Image from "next/image"
 
-export type StaticImageData = {
-  src: string
-  height: number
-  width: number
-  blurDataURL?: string
-  placeholder?: string
-}
-
 export interface Img_props {
   src: string
   alt: string
@@ -20,7 +12,7 @@ export interface Img_props {
   width?: number
 }
 
-const DynamicImg = ({
+export const DynamicImg = ({
   src,
   alt,
   objectFit,
@@ -72,5 +64,3 @@ const DynamicImg = ({
     </span>
   )
 }
-
-export default DynamicImg

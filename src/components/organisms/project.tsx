@@ -5,7 +5,7 @@ import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import { useState, useRef } from "react"
 
-import DynamicImg from "atoms/Img"
+import { DynamicImg } from "atoms/Img"
 
 import { useRouter } from "next/router"
 import Markdown from "markdown-to-jsx"
