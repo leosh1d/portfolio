@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
 import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
-import { DynamicImg } from "../atoms/Img"
+import { DynamicImg } from "../atoms/DynamicImg"
 
 import { useRouter } from "next/router"
 import Markdown from "markdown-to-jsx"
