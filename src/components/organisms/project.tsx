@@ -5,7 +5,7 @@ import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import { useState, useRef } from "react"
 
-import DynamicImg from "../atoms/Img"
+import DynamicImg from "atoms/Img"
 
 import { useRouter } from "next/router"
 import Markdown from "markdown-to-jsx"
@@ -29,12 +29,17 @@ export default function Project({ src, title, md = "", stack, height, width }: P
   const router = useRouter()
 
   useEffect(() => {
+    const offScroll = async () => {
+      await smoothScroll(parentBox.current)
+      document.body.style.overflow = "auto"
+      setIsOpened(false)
+    }
     if (router.query.project === title.toLocaleLowerCase()) {
       setIsOpened(true)
     } else {
       offScroll()
     }
-  }, [router.query, title, offScroll])
+  }, [router.query, title])
 
   const AnimationStart = () => {
     setIsAnimating(true)
@@ -48,12 +53,6 @@ export default function Project({ src, title, md = "", stack, height, width }: P
     document.body.style.overflow = "hidden"
 
     router.push(`/?project=${title.toLowerCase()}`, `/?project=${title.toLowerCase()}`, { shallow: true })
-  }
-
-  const offScroll = async () => {
-    await smoothScroll(parentBox.current)
-    document.body.style.overflow = "auto"
-    setIsOpened(false)
   }
 
   const handleOff = () => {
@@ -150,6 +149,7 @@ export default function Project({ src, title, md = "", stack, height, width }: P
           </motion.div>
         </motion.div>
         <button
+          aria-label="close overlay"
           onClick={handleOff}
           className={`z-10 fixed w-screen transition h-screen top-0 left-0 ${
             isOpened ? "bg-black/20" : "pointer-events-none"
