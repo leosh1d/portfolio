@@ -1,10 +1,11 @@
 import React, { useEffect } from "react"
 
-import Img from "../atoms/Img"
 import { motion } from "framer-motion"
 import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import { useState, useRef } from "react"
+
+import Img from "../atoms/Img"
 
 import { useRouter } from "next/router"
 import Markdown from "markdown-to-jsx"

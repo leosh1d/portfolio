@@ -9,6 +9,11 @@ import { InferGetStaticPropsType } from "next"
 
 import { getStaticProps } from "../../../pages/index"
 
+type locObj = {
+  content: string
+  locale: string
+}
+
 function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) {
   const lang = useRouter().locale || "en"
 
@@ -26,7 +31,7 @@ function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) 
             .slice(0)
             .reverse()
             .map((content: InferGetStaticPropsType<typeof getStaticProps>, index: number) => {
-              const md = content.localizations.filter((object) => object.locale === lang)[0].content
+              const md = content.localizations.filter((object: locObj) => object.locale === lang)[0].content
               return (
                 <Project
                   src={content.preview.url}
