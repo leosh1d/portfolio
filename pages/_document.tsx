@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@700&display=swap"
             rel="stylesheet"
           />
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7VME9VL8T" />

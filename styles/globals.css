@@ -1,22 +1,24 @@
 #nprogress .bar {
-  background-color: #ed2939 !important;
+  @apply bg-main !important;
 }
 
 *:focus {
   outline: none;
 }
 
+.chat {
+  scrollbar-gutter: stable both-edges;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
 ::selection {
-  background-color: hsla(355, 84%, 55%, 0.1);
-  color: #ed2939;
+  @apply bg-main/20 text-main;
 }
 
-*::-webkit-scrollbar {
-  width: 0.5em;
+.no-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -88,6 +90,10 @@ textarea:not(:placeholder-shown) + span {
   justify-content: flex-end;
 }
 
+.switch-theme[data-value="dark"] {
+  justify-content: flex-start;
+}
+
 .switch-theme[data-value="system"] {
   justify-content: center;
 }
@@ -135,4 +141,26 @@ textarea:not(:placeholder-shown) + span {
 .text-decoration-custom:hover,
 .text-decoration-custom:focus {
   text-decoration-color: currentColor !important;
+}
+
+p a,
+h3 a {
+  @apply font-bold pb-1 text-main ease-out-quad duration-200 text-decoration-custom underline relative;
+}
+
+h3 {
+  @apply text-xl lg:text-2xl font-bold;
+}
+
+h2 {
+  @apply text-2xl lg:text-3xl font-bold;
+}
+
+blockquote p {
+  @apply text-black_light/30 rounded bg-gray_dark/20 py-2 px-4 font-bold;
+}
+
+.centered {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

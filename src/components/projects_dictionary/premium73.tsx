@@ -2,7 +2,7 @@ import React from "react"
 import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
-import Img from "../atoms/img"
+import Img from "../atoms/StaticImg"
 import Premium_m from "../../img/premium_m.webp"
 import Premium_pc from "../../img/premium_pc.webp"
 

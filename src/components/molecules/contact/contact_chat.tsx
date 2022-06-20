@@ -40,19 +40,19 @@ const Contact_Chat = ({ lang }: { lang: string }) => {
     const message4 = { text: d_bot.hello_response_3[lang], isUser: false }
     setTimeout(() => {
       set_array([...array, message1])
-    }, 400)
+    }, 300)
     setTimeout(() => {
       set_array([...array, message1, message2])
-    }, 800)
+    }, 700)
     setTimeout(() => {
       set_array([...array, message1, message2, message3])
     }, 1200)
     setTimeout(() => {
       set_array([...array, message1, message2, message3, message4])
-    }, 1600)
+    }, 1900)
     setTimeout(() => {
       set_btns_visibility(true)
-    }, 2000)
+    }, 2400)
   }
 
   const push__work = () => {

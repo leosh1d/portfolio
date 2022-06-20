@@ -13,8 +13,17 @@ const Switch = ({ initial_value, content }: switch_props) => {
   const [value, set_value] = useState(initial_value)
   const router = useRouter()
 
+  const variant = {
+    "0": {
+      x: "0",
+    },
+    "1": {
+      x: "100%",
+    },
+  }
+
   return (
-    <div className="w-full relative rounded-full flex flex-row my-2 p-2 bg-gray_dark dark:bg-black_dark ease-out-quad duration-200">
+    <div className="w-full relative overflow-hidden rounded-full flex flex-row my-2 p-2 bg-gray_dark dark:bg-black_dark ease-out-quad duration-200">
       {content.map((content, index) => (
         <Link href={router.asPath} locale={content} key={index} scroll={false}>
           <a
@@ -28,10 +37,11 @@ const Switch = ({ initial_value, content }: switch_props) => {
           </a>
         </Link>
       ))}
-      <div data-value={value} className="switch flex flex-row absolute inset-0 rounded-full p-2">
+      <div className="flex flex-row absolute inset-0 rounded-full p-2">
         <motion.div
-          layout
-          className="bg-white w-1/2 h-full rounded-full dark:bg-black_light ease-out-quad duration-200 transition-colors	"
+          variants={variant}
+          animate={String(value)}
+          className="bg-white w-1/2 h-full rounded-full dark:bg-black_light ease-out-quad duration-200 transition-colors"
         ></motion.div>
       </div>
     </div>

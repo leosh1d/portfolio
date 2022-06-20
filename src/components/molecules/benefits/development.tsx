@@ -61,7 +61,7 @@ const Development = () => {
           transition={{ duration: 0.5 }}
           className="relative flex items-center justify-center"
         >
-          <p className="text-5xl font-bold text-center text-black_light ease-out-quad duration-200 dark:text-white my-2 mx-4 ">
+          <p className="text-5xl text-center text-black_light font-black ease-out-quad duration-200 dark:text-white my-2 mx-4 ">
             {d_benefits.development_months[lang]}
           </p>
           <motion.div
@@ -72,7 +72,7 @@ const Development = () => {
           />
         </motion.div>
         <motion.div variants={box2_variants} animate={animation} transition={{ duration: 0.3, delay: 1.1 }}>
-          <p className="text-5xl font-bold text-center my-1 text-main ease-out-quad duration-200 ">
+          <p className="text-5xl text-center my-1 text-main font-black ease-out-quad duration-200 ">
             {d_benefits.development_weeks[lang]}
           </p>
         </motion.div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 type dictionary_options = {
   [key: string]: {
@@ -39,112 +39,111 @@ export const d_settings: dictionary_options = {
 export const d_benefits: dictionary_options = {
   load: {
     ru: "Молниеносная загрузка",
-    en: "Lightning fast load"
+    en: "Lightning fast load",
   },
   code_title: {
     ru: "Чистый код",
-    en: "Clean code"
+    en: "Clean code",
   },
   code_semantic: {
-    ru: "Семантичный Html.",
-    en: "Semantic Html."
+    ru: "Семантичный Html",
+    en: "Semantic Html",
   },
   code_frameworks: {
-    ru: "Современный стек.",
-    en: "Modern stack."
+    ru: "Современный стек",
+    en: "Modern stack",
   },
   code_perfomance: {
-    ru: "Высокая производительность.",
-    en: "High perfomance."
+    ru: "Высокая производительность",
+    en: "High perfomance",
   },
   development: {
-    ru: "Быстрая разработка.",
-    en: "Fast development."
+    ru: "Быстрая разработка",
+    en: "Fast development",
   },
   development_months: {
-    ru: 'Месяцы',
-    en: "Months"
+    ru: "Месяцы",
+    en: "Months",
   },
   development_weeks: {
     ru: "Недели",
-    en: "Weeks"
-  }
+    en: "Weeks",
+  },
 }
 
 export const d_projects: dictionary_options = {
   heading: {
     ru: "Проекты",
-    en: "Projects"
+    en: "Projects",
   },
   subheading: {
-    ru: "Небольшая подборка моих работ.",
-    en: "A small selection of my works."
-  }
+    ru: "Небольшая подборка моих работ",
+    en: "A small selection of my works",
+  },
 }
 
-
 export const d_404: dictionary_options = {
-  title:{ 
-      ru: "Страница не найдена",
-      en: "Page not found"
-  }
+  title: {
+    ru: "Страница не найдена",
+    en: "Page not found",
+  },
 }
 
 export const d_bot: dictionary_options = {
   heading: {
     en: "Bot",
-    ru: "Бот"
+    ru: "Бот",
   },
   subheading: {
     en: "Ask me a question!",
-    ru: "Задай мне вопрос!"
+    ru: "Задай мне вопрос!",
   },
   hello: {
     en: "Hi! i'm bot 🤖",
-    ru: "Привет! я бот 🤖"
+    ru: "Привет! я бот 🤖",
   },
   help: {
     en: "How i can help you today?",
-    ru: "Как я могу Вам помочь?"
+    ru: "Как я могу Вам помочь?",
   },
   btn_hello: {
     en: "👋 i just wanted to say hello",
-    ru: "👋 я просто хотел поздороваться"
+    ru: "👋 я просто хотел поздороваться",
   },
   hello_response_1: {
     en: "Well hello there!",
-    ru: "Ну привет!"
+    ru: "Ну привет!",
   },
   hello_response_2: {
     en: "I hope you've enjoyed browsing my work",
-    ru: "Надеюсь, вам понравилось просматривать мои работы"
+    ru: "Надеюсь, вам понравилось просматривать мои работы",
   },
   hello_response_3: {
     en: "Can i help you with anything else?",
-    ru: "Могу я Вам еще чем-нибудь помочь?"
+    ru: "Могу я Вам еще чем-нибудь помочь?",
   },
   btn_work: {
     en: "💼 I'd like to work with you!",
-    ru: "💼 Я хотел бы с тобой поработать!"
+    ru: "💼 Я хотел бы с тобой поработать!",
   },
   work_response_1: {
     en: "Great!",
-    ru: "Отлично!"
+    ru: "Отлично!",
   },
   work_response_2: {
     en: "Send me a message and lets chat further!",
-    ru: "Отправьте мне сообщение и давайте продолжим общение! "
+    ru: "Отправьте мне сообщение и давайте продолжим общение! ",
   },
   other: {
     en: "🤔 Other options?",
-    ru: "🤔 Другие опции?"
+    ru: "🤔 Другие опции?",
   },
   btn_stack: {
     en: "👨‍💻 What stack do you program on?",
-    ru: "👨‍💻 На каком стеке ты работаешь?"
+    ru: "👨‍💻 На каком стеке ты работаешь?",
   },
   stack_response: {
     en: "Typecript, React и Next.js/Gatsby ",
-    ru: "Typecript, React and Next.js/Gatsby"
-  }
+    ru: "Typecript, React and Next.js/Gatsby",
+  },
 }

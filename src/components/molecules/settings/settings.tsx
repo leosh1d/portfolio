@@ -11,8 +11,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { d_settings } from "../../dictionary"
 
 const motion_menu = {
-  open: { y: 0 },
-  closed: { y: "110%" },
+  open: { translateY: 0 },
+  closed: { translateY: "110%" },
 }
 
 const Settings = () => {

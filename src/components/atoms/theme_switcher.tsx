@@ -14,8 +14,20 @@ const Theme_Switcher = () => {
 
   const lang = useRouter().locale
 
+  const variant = {
+    dark: {
+      x: "-100%",
+    },
+    light: {
+      x: "100%",
+    },
+    system: {
+      x: 0,
+    },
+  }
+
   return (
-    <div className=" rounded-full flex flex-row my-2 p-2 bg-gray_dark dark:bg-black_dark ease-out-quad duration-200 relative">
+    <div className="rounded-full flex flex-row overflow-hidden my-2 p-2 bg-gray_dark dark:bg-black_dark ease-out-quad duration-200 relative">
       <button
         className="text-center py-2 px-2 w-1/2 cursor-pointer rounded-full ring-white dark:ring-black_light focus-visible:ring-8 relative z-10 text-black_light dark:text-white ease-out-quad duration-200"
         onClick={() => {
@@ -40,10 +52,11 @@ const Theme_Switcher = () => {
       >
         {lang === "ru" ? "светлое" : "light"}
       </button>
-      <div className="flex flex-row absolute inset-0 rounded-full p-2 switch-theme" data-value={theme_state}>
+      <div className="flex flex-row justify-center absolute inset-0 rounded-full p-2">
         <motion.div
-          layout
-          className="bg-white w-1/3 h-full rounded-full dark:bg-black_light ease-out-quad duration-200 transition-colors	"
+          variants={variant}
+          animate={theme_state}
+          className="bg-white w-1/3 h-full rounded-full dark:bg-black_light ease-out-quad duration-200 transition-colors"
         ></motion.div>
       </div>
     </div>

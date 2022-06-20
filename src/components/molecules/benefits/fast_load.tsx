@@ -3,7 +3,7 @@ import Heading from "../../atoms/heading"
 import { useRouter } from "next/router"
 import { d_benefits } from "../../dictionary"
 
-import Img from "../../atoms/img"
+import Img from "../../atoms/StaticImg"
 import img_load from "../../../img/fast-load.webp"
 
 const Fast_load = () => {

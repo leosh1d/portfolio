@@ -2,7 +2,7 @@ import React from "react"
 import Text_Link from "../atoms/text-link"
 import Paragraph from "../atoms/paragraph"
 import Heading from "../atoms/heading"
-import Img from "../atoms/img"
+import Img from "../atoms/StaticImg"
 import Grebeni_m from "../../img/grebeni_m.webp"
 import Grebeni_pc from "../../img/grebeni_pc.webp"
 

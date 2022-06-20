@@ -1,7 +1,12 @@
 * {
-  font-family: "Montserrat";
+  font-family: "Inter", sans-serif;
+}
+
+span {
+  font-family: inherit !important;
+  font-stretch: inherit;
 }
 
 .cascadia {
-  font-family: "Source Code Pro";
+  font-family: "Source Code Pro", monospace !important;
 }

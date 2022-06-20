@@ -3,43 +3,13 @@ import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import { useRouter } from "next/router"
 import { d_projects } from "../dictionary"
-import Img from "../atoms/img"
-import braces from "../../img/braces.webp"
-import delivery from "../../img/delivery.webp"
-import mak from "../../img/mak.webp"
-import grebeni from "../../img/grebeni.webp"
-import Link from "next/link"
+import Project from "./project"
 
-interface Wrapper {
-  children: React.ReactNode
-}
+import { InferGetStaticPropsType } from "next"
 
-interface link_props {
-  href: string
-  img: StaticImageData
-}
+import { getStaticProps } from "../../../pages/index"
 
-const Img_wrapper = ({ children }: Wrapper) => {
-  return (
-    <div className="rounded-3xl overflow-hidden relative opacity-50 hover:opacity-100 transition-opacity duration-200">
-      {children}
-    </div>
-  )
-}
-
-const Link_img = ({ href, img }: link_props) => {
-  return (
-    <Link passHref href={href} scroll={false}>
-      <a>
-        <Img_wrapper>
-          <Img src={img} alt="href"></Img>
-        </Img_wrapper>
-      </a>
-    </Link>
-  )
-}
-
-const Projects = () => {
+function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) {
   const lang = useRouter().locale || "en"
 
   return (
@@ -51,11 +21,24 @@ const Projects = () => {
           </Heading>
           <Subheading additional_class="lg:text-5xl lg:py-2 sm:text-3xl">{d_projects.subheading[lang]}</Subheading>
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-8 gap-4 flex-col w-full px-4 container">
-          <Link_img href="/works/premium73" img={braces} />
-          <Link_img href="/works/delivery" img={delivery} />
-          <Link_img href="/works/grebeni" img={grebeni} />
-          <Link_img href="/works/mac" img={mak} />
+        <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-8 gap-4 w-full px-4 container">
+          {projects
+            .slice(0)
+            .reverse()
+            .map((content: InferGetStaticPropsType<typeof getStaticProps>, index: number) => {
+              const md = content.localizations.filter((object) => object.locale === lang)[0].content
+              return (
+                <Project
+                  src={content.preview.url}
+                  title={content.title}
+                  stack={content.stack}
+                  md={md}
+                  width={content.preview.width}
+                  height={content.preview.height}
+                  key={index}
+                />
+              )
+            })}
         </div>
       </div>
     </div>

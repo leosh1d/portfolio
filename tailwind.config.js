@@ -1,13 +1,13 @@
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
   mode: "jit",
   darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
-      gilroy: ["Gilroy"],
+      gilroy: ["Inter"],
     },
     boxShadow: {
-      DEFAULT: " 0px 0px 20px 3px #F2EFF1",
+      DEFAULT: "0px 0px 20px 3px #F2EFF1",
       none: "0px 0px 0px 0px #000000",
     },
     transitionTimingFunction: {
