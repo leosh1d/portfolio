@@ -17,6 +17,10 @@ class MyDocument extends Document {
           <meta property="og:title" content="leosh1d" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://leosh1d.site" />
+          <meta property="og:description" content="Frontend developer UI/UX designer" />
+          <meta property="og:image:width" content="2560" />
+          <meta property="og:image:height" content="1098" />
+          <meta property="og:image:type" content="image/jpeg" />
           <Script async src="https://www.googletagmanager.com/gtag/js?id=G-X7VME9VL8T" />
           <Script
             dangerouslySetInnerHTML={{
