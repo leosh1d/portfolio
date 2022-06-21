@@ -29,9 +29,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   const handleRouteChange = ({ url }: IRouteChainge) => {
-    window.gtag("config", "[Tracking ID]", {
-      page_path: url,
-    })
+    if (window.gtag) {
+      window.gtag("config", "[Tracking ID]", {
+        page_path: url,
+      })
+    }
   }
 
   useEffect(() => {

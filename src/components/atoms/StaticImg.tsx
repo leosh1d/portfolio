@@ -32,6 +32,7 @@ const StaticImg = ({ src, alt, objectFit, layout = "responsive", className = "",
         width={width}
         objectFit={objectFit}
         layout={layout}
+        placeholder="blur"
         className={`${className} ${is_load ? "unblur " : ""}`}
         onLoadingComplete={() => set_is_load(true)}
       />
