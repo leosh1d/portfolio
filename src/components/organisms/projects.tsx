@@ -7,7 +7,7 @@ import Project from "./project"
 
 import { InferGetStaticPropsType } from "next"
 
-import { getStaticProps } from "../../../pages/index"
+import { getStaticProps } from "../../../pages"
 
 type locObj = {
   content: string
