@@ -12,14 +12,13 @@ export type StaticImageData = {
 export interface Img_props {
   src: StaticImageData
   alt: string
-  layout?: "responsive" | "fixed" | "fill" | "intrinsic" | "raw"
   objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down"
   className?: string
   height?: number
   width?: number
 }
 
-const StaticImg = ({ src, alt, objectFit, layout = "responsive", className = "", height, width }: Img_props) => {
+const StaticImg = ({ src, alt, objectFit, className = "", height, width }: Img_props) => {
   const [is_load, set_is_load] = useState(false)
 
   return (
@@ -30,11 +29,12 @@ const StaticImg = ({ src, alt, objectFit, layout = "responsive", className = "",
         quality={100}
         height={height}
         width={width}
-        objectFit={objectFit}
-        layout={layout}
         placeholder="blur"
+        style={{
+          objectFit: objectFit,
+        }}
         className={`${className} ${is_load ? "unblur " : ""}`}
-        onLoadingComplete={() => set_is_load(true)}
+        onLoad={() => set_is_load(true)}
       />
       <style jsx global>{`
         .unblur {

@@ -1,6 +1,6 @@
 {
   "name": "leosh1d",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -11,16 +11,17 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.5",
-    "framer-motion": "^6.3.6",
+    "framer-motion": "^11.5.4",
     "i18n": "^0.13.3",
+    "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.1.7",
-    "next": "12.1.6",
+    "next": "14.2.11",
     "next-themes": "^0.2.0",
     "nprogress": "^0.2.0",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-intersection-observer": "^8.32.1",
-    "sharp": "^0.30.6"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
@@ -31,8 +32,8 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "11.1.0",
     "next-sitemap": "^1.9.12",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.45",
     "tailwindcss": "^3.0.24",
-    "typescript": "4.3.5"
+    "typescript": "5.6.3"
   }
 }

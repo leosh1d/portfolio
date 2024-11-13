@@ -1,15 +1,16 @@
 import React from "react"
-import Pixel_Perfect from "../molecules/benefits/pixel_perfect"
+import Mentoring from "../molecules/benefits/mentoring/mentoring"
 import Mobile_First from "../molecules/benefits/mobile_first"
 import Fast_load from "../molecules/benefits/fast_load"
 import Code from "../molecules/benefits/code"
 import Development from "../molecules/benefits/development"
+import TreeBuildComponent from "../molecules/benefits/algo/treeBuildComponent";
 
 const Benefits = () => {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 lg:gap-8 flex-col w-full p-4 container mt-4">
       <div className="xl:col-span-1">
-        <Pixel_Perfect />
+        <Mentoring />
       </div>
       <div className="xl:col-span-3">
         <Mobile_First />
@@ -24,7 +25,7 @@ const Benefits = () => {
       </div>
 
       <div className="xl:col-span-full">
-        <Development />
+          <TreeBuildComponent/>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Message from "./message"
 import { d_bot } from "../../dictionary"
-import Chat_btn from "./chat_btn"
+import ChatBtn from "./chat_btn"
 
 const Contact_Chat = ({ lang }: { lang: string }) => {
   const [array, set_array] = useState([
@@ -127,19 +127,19 @@ const Contact_Chat = ({ lang }: { lang: string }) => {
               Telegram
             </a>
             <a
-              href="mailto:leosh1dddd@gmail.com"
+              href="mailto:i@leosh1d.ru"
               className="rounded-3xl focus-visible:ring-4 ring-main my-2 cursor-pointer ml-auto p-4 font-bold bg-main text-main bg-opacity-5 hover:bg-opacity-10 duration-200 ease-out-quad"
             >
               ✉️ Mail
             </a>
-            <Chat_btn click={return_} content={d_bot.other[lang]} />
+            <ChatBtn onClick={return_} children={d_bot.other[lang]} />
           </div>
         </div>
       ) : (
         <div className={"transition-opacity duration-200 " + (!btns_visibility ? "opacity-0" : "")}>
-          <Chat_btn click={push__hello} content={d_bot.btn_hello[lang]} />
-          <Chat_btn click={push__stack} content={d_bot.btn_stack[lang]} />
-          <Chat_btn click={push__work} content={d_bot.btn_work[lang]} />
+          <ChatBtn onClick={push__hello} children={d_bot.btn_hello[lang]} />
+          <ChatBtn onClick={push__stack} children={d_bot.btn_stack[lang]} />
+          <ChatBtn onClick={push__work} children={d_bot.btn_work[lang]} />
         </div>
       )}
     </div>

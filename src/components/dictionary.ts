@@ -38,8 +38,8 @@ export const d_settings: dictionary_options = {
 
 export const d_benefits: dictionary_options = {
   load: {
-    ru: "Молниеносная загрузка",
-    en: "Lightning fast load",
+    ru: "SEO оптимизация",
+    en: "SEO optimization",
   },
   code_title: {
     ru: "Чистый код",
@@ -77,8 +77,8 @@ export const d_projects: dictionary_options = {
     en: "Projects",
   },
   subheading: {
-    ru: "Небольшая подборка моих работ",
-    en: "A small selection of my works",
+    ru: "Подборка моих работ",
+    en: "Selection of my works",
   },
 }
 
@@ -87,6 +87,10 @@ export const d_404: dictionary_options = {
     ru: "Страница не найдена",
     en: "Page not found",
   },
+  back: {
+    ru: "Вернуться на главную",
+    en: "Go back to the main page"
+  }
 }
 
 export const d_bot: dictionary_options = {

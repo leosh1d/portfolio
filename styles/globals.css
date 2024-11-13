@@ -164,3 +164,10 @@ blockquote p {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+
+circle,
+rect,
+line{
+  stroke-linecap: round;
+}

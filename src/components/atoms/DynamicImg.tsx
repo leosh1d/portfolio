@@ -45,7 +45,7 @@ export function DynamicImg({
         objectFit={objectFit}
         layout={layout}
         className={`${className} ${is_load ? "unblur " : ""}`}
-        onLoadingComplete={() => set_is_load(true)}
+        onLoad={() => set_is_load(true)}
       />
       <style jsx global>{`
         .unblur {
