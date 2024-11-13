@@ -7,7 +7,7 @@ module.exports = {
 
   images: {
     domains: ["media.graphassets.com"],
-    unoptimized: false
+    unoptimized: true
   },
 
   webpack(config) {
