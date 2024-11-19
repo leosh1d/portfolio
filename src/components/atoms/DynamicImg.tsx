@@ -50,7 +50,7 @@ export function DynamicImg({
       />
             {/* eslint-disable-next-line react/no-unknown-property */}
             <style jsx global>{`
-                .unblur {
+                .unblur {r
                     animation: unblur 0.1s linear;
                 }
 

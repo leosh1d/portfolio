@@ -11,6 +11,7 @@ import client from "../src/components/graphql/init"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import GET_PROJECTS from "../src/components/graphql/queries/projects"
 
+
 export const getStaticProps: GetStaticProps = async () => {
   const { data, error } = await client.query({
     query: GET_PROJECTS,

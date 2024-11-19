@@ -5,6 +5,7 @@ const GET_PROJECTS = gql`
     projects {
       title
       stack
+      order
       preview {
         url
         height

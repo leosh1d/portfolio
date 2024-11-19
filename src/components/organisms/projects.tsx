@@ -29,7 +29,15 @@ function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) 
         <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-8 gap-4 w-full px-4 container">
           {projects
             .slice(0)
-            .reverse()
+            .sort((a: InferGetStaticPropsType<typeof getStaticProps>, b:InferGetStaticPropsType<typeof getStaticProps>)=> {
+              if (a.order > b.order) {
+                return 1;
+              }
+              if (a.order < b.order) {
+                return -1;
+              }
+              return 0;
+            })
             .map((content: InferGetStaticPropsType<typeof getStaticProps>, index: number) => {
               const md = content.localizations.filter((object: locObj) => object.locale === lang)[0].content
               return (
