@@ -45,12 +45,12 @@ export function DynamicImg({
           blurDataURL={getPlaceholder(src)}
           objectFit={objectFit}
           layout={layout}
-          className={`${className} ${is_load ? "unblur " : ""}`}
+          // className={`${className} ${is_load ? "unblur " : ""}`}
           onLoad={() => set_is_load(true)}
       />
             {/* eslint-disable-next-line react/no-unknown-property */}
             <style jsx global>{`
-                .unblur {r
+                .unblur {
                     animation: unblur 0.1s linear;
                 }
 
