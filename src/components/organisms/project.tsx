@@ -161,6 +161,7 @@ export default function Project({src, title, md = "", stack}: ProjectProps) {
                                         ul: {component: UL},
                                         a: {
                                             props: {
+                                                rel: "noopener noreferrer",
                                                 target: '_blank'
                                             }
                                         },
