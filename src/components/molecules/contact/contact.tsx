@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Close from "../../../svg/close"
 import Contact_Btn from "./contact_btn"
 import { useRouter } from "next/router"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 
 import Heading from "../../atoms/heading"
 import Subheading from "../../atoms/subheading"

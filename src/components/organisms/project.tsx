@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from "react"
 
-import {motion, useSpring} from "framer-motion"
+import {motion, useSpring} from "motion/react"
 import Heading from "../atoms/heading"
 import Subheading from "../atoms/subheading"
 import {DynamicImg} from "../atoms/DynamicImg"

@@ -6,7 +6,7 @@ import Theme_Switcher from "../../atoms/theme_switcher"
 import Close from "../../../svg/close"
 import Setting_Btn from "./settings_btn"
 import { useRouter } from "next/router"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 
 import { d_settings } from "../../dictionary"
 

@@ -45,7 +45,7 @@ const Code = () => {
             <span className="text-main font-bold cascadia">li</span>
             <span className="text-alt font-bold cascadia">{">"}</span>
             <span className="font-bold cascadia text-black_light ease-out-quad duration-200 dark:text-white">
-              {d_benefits.code_perfomance[lang]}
+              {d_benefits.autotest[lang]}
             </span>
 
             <span className="text-alt font-bold cascadia">{"</"}</span>

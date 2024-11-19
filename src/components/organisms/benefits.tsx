@@ -5,6 +5,7 @@ import Fast_load from "../molecules/benefits/fast_load"
 import Code from "../molecules/benefits/code"
 import Development from "../molecules/benefits/development"
 import TreeBuildComponent from "../molecules/benefits/algo/treeBuildComponent";
+import {TechReview} from "../molecules/benefits/tech_review/tech_review";
 
 const Benefits = () => {
   return (
@@ -13,7 +14,7 @@ const Benefits = () => {
         <Mentoring />
       </div>
       <div className="xl:col-span-3">
-        <Mobile_First />
+        <TechReview />
       </div>
 
       <div className="xl:col-span-2">

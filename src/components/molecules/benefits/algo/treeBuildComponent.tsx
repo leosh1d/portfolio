@@ -1,9 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'motion/react';
 import TreeNodeComponent, {NODE_SIZE_PX, TreeNode} from "./treeNode";
 import ChatBtn from "../../contact/chat_btn";
 import Heading from "../../../atoms/heading";
 import {useInView} from "react-intersection-observer";
+import {d_benefits} from "../../../dictionary";
+import {useRouter} from "next/router";
 
 const MAX_TREE_DEPTH = 4;
 
@@ -155,29 +157,32 @@ const TreeBuildComponent = () => {
         }
     }, [inView]);
 
+    const lang = useRouter().locale || "en"
 
     return (
         <motion.div
             ref={ref}
             layout
             className="rounded-3xl flex flex-col md:text-xl overflow-hidden relative w-full h-full justify-between bg-gray_medium dark:bg-black_medium duration-200 transition-colors">
-            <motion.div layout='position' className="p-4">
-                <Heading additional_class="m-4 lg:m-6">
-                    Понимание алгоритмов
+            <motion.div layout='position' className="flex gap-4 p-4 lg:p-6 items-start justify-between">
+                <Heading>
+                    {d_benefits.algo[lang]}
                 </Heading>
+                <div className=' flex flex-col gap-4'>
 
                 <ChatBtn
                     onClick={handleAddNode}
                     disabled={isFull}
                 >
-                    Добавить узел
+                    {d_benefits.add_node[lang]}
                 </ChatBtn>
                 <ChatBtn
                     disabled={root === null}
                     onClick={handleRemoveNode}
                 >
-                    Удалить узел
+                    {d_benefits.remove_node[lang]}
                 </ChatBtn>
+                </div>
 
             </motion.div>
             <div className="relative w-full h-[500px]">
@@ -185,7 +190,6 @@ const TreeBuildComponent = () => {
                     {root && (
                         <div ref={parentRef} className="relative w-full h-[500px]">
                             <TreeNodeComponent node={root} x={treeXCenter} y={0} level={0} index={0}/>
-
                         </div>
                     )}
                 </AnimatePresence>

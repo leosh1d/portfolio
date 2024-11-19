@@ -108,7 +108,7 @@ const Contact_Chat = ({lang}: { lang: string }) => {
 
     return (
         <div
-            className="flex overflow-y-auto chat flex-col bg-white dark:bg-black_dark py-4 h-full px-8 rounded-3xl bg-opacity-50 dark:bg-opacity-50 lg:rounded-4xl">
+            className="flex overflow-y-auto chat flex-col bg-white dark:bg-black_dark p-4 h-full  rounded-3xl bg-opacity-50 dark:bg-opacity-50 lg:rounded-4xl">
             {array.map((content, index) => {
                 return (
                     <Message key={index} isUser={content.isUser}>
@@ -139,14 +139,14 @@ const Contact_Chat = ({lang}: { lang: string }) => {
                     </div>
                 </div>
             ) : (
-                <div className={"transition-opacity duration-200 " + (!btns_visibility ? "opacity-0" : "")}>
-                    <ChatBtn onClick={push__hello}>
+                <div className={"transition-opacity duration-200 flex flex-col align-start p-4 gap-4 " + (!btns_visibility ? "opacity-0" : "")}>
+                    <ChatBtn className='ml-auto' onClick={push__hello}>
                         {d_bot.btn_hello[lang]}
                     </ChatBtn>
-                    <ChatBtn onClick={push__stack}>
+                    <ChatBtn className='ml-auto' onClick={push__stack}>
                         {d_bot.btn_stack[lang]}
                     </ChatBtn>
-                    <ChatBtn onClick={push__work}>
+                    <ChatBtn className='ml-auto' onClick={push__work}>
                         {d_bot.btn_work[lang]}
                     </ChatBtn>
                 </div>

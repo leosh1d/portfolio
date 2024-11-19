@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Heading from "../../atoms/heading"
 import { useRouter } from "next/router"
 import { d_benefits } from "../../dictionary"
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation } from "motion/react"
 
 import { useInView } from "react-intersection-observer"
 
