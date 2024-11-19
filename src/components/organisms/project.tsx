@@ -8,6 +8,8 @@ import {DynamicImg} from "../atoms/DynamicImg"
 import {useRouter} from "next/router"
 import Markdown from "markdown-to-jsx"
 import {debounce} from "next/dist/server/utils";
+import {LI} from "../atoms/li";
+import {UL} from "../atoms/ul";
 
 interface ProjectProps {
     title: string
@@ -18,7 +20,7 @@ interface ProjectProps {
     width: number
 }
 
-export default function Project({src, title, md = "", stack, height, width}: ProjectProps) {
+export default function Project({src, title, md = "", stack}: ProjectProps) {
     const [isOpened, setIsOpened] = useState(false)
 
     const [isAnimating, setIsAnimating] = useState(false)
@@ -154,8 +156,9 @@ export default function Project({src, title, md = "", stack, height, width}: Pro
                             <Markdown
                                 options={{
                                     wrapper: React.Fragment,
-
                                     overrides: {
+                                        li: {component: LI},
+                                        ul: {component: UL},
                                         a: {
                                             props: {
                                                 target: '_blank'
