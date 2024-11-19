@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {AnimatePresence, motion} from 'motion/react';
-import TreeNodeComponent, {NODE_SIZE_PX, TreeNode} from "./treeNode";
+import {NODE_SIZE_PX, TreeNode, TreeNodeComponent} from "./treeNode";
 import ChatBtn from "../../contact/chat_btn";
 import Heading from "../../../atoms/heading";
 import {useInView} from "react-intersection-observer";
@@ -117,12 +117,19 @@ const TreeBuildComponent = () => {
 
     const calcXCenter = () => {
         const elem = parentRef.current;
+        const delta = isMobile ? nodeSizePxRelative : 0
         if (elem)
-            setTreeXCenter(elem.offsetWidth / 2 - NODE_SIZE_PX / 2);
+            setTreeXCenter(elem.offsetWidth / 2 - NODE_SIZE_PX / 2 + delta);
     };
 
     useEffect(() => {
         calcXCenter();
+        window.addEventListener('resize', calcXCenter);
+
+        return () => {
+            window.removeEventListener('resize', calcXCenter);
+        };
+
     }, [calcXCenter]);
 
     // Эффект для проверки состояния кнопки
@@ -159,6 +166,24 @@ const TreeBuildComponent = () => {
 
     const lang = useRouter().locale || "en"
 
+    const [isMobile, setIsMobile] = useState(
+        typeof window !== 'undefined' && window.innerWidth <= 768
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    const nodeSizePxRelative = isMobile ? NODE_SIZE_PX / 3 : NODE_SIZE_PX;
+
+
     return (
         <motion.div
             ref={ref}
@@ -168,28 +193,31 @@ const TreeBuildComponent = () => {
                 <Heading>
                     {d_benefits.algo[lang]}
                 </Heading>
-                <div className=' flex flex-col gap-4'>
+                <div className='flex flex-col md:flex-row gap-4'>
 
-                <ChatBtn
-                    onClick={handleAddNode}
-                    disabled={isFull}
-                >
-                    {d_benefits.add_node[lang]}
-                </ChatBtn>
-                <ChatBtn
-                    disabled={root === null}
-                    onClick={handleRemoveNode}
-                >
-                    {d_benefits.remove_node[lang]}
-                </ChatBtn>
+                    <ChatBtn
+                        onClick={handleAddNode}
+                        disabled={isFull}
+                        className='w-16 h-16 rounded-full'
+                    >
+                        +
+                    </ChatBtn>
+                    <ChatBtn
+                        disabled={root === null}
+                        onClick={handleRemoveNode}
+                        className='w-16 h-16 rounded-full'
+                    >
+                        -
+                    </ChatBtn>
                 </div>
 
             </motion.div>
-            <div className="relative w-full h-[500px]">
+            <div className="relative w-full h-[300px] md:h-[500px]">
                 <AnimatePresence>
                     {root && (
-                        <div ref={parentRef} className="relative w-full h-[500px]">
-                            <TreeNodeComponent node={root} x={treeXCenter} y={0} level={0} index={0}/>
+                        <div ref={parentRef} className="relative w-full h-[300px] md:h-[500px]">
+                            <TreeNodeComponent nodeSizePxRelative={nodeSizePxRelative} node={root}
+                                               x={treeXCenter} y={0} level={0} index={0}/>
                         </div>
                     )}
                 </AnimatePresence>
